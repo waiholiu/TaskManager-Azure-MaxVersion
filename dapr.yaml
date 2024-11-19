@@ -1,0 +1,16 @@
+apps:
+- appDirPath: TasksTracker.TasksManager.Backend.Api
+  appID: tasksmanager-backend-api
+  appPort: 5233
+  daprHTTPPort: 3500
+  command:
+  - dotnet
+  - run
+- appDirPath: TasksTracker.WebPortal.Frontend.Ui
+  appID: tasksmanager-webportal-frontend-ui
+  appPort: 5049
+  daprHTTPPort: 3501
+  command:
+  - dotnet
+  - run
+version: 1
