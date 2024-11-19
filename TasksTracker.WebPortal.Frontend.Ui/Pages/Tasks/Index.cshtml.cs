@@ -44,6 +44,7 @@ namespace TasksTracker.WebPortal.Frontend.Ui.Pages.Tasks
                 //TasksList = await daprHttpClient.GetFromJsonAsync<List<TaskModel>>($"http://tasksmanager-backend-api/api/tasks?createdBy={TasksCreatedBy}");
 
                 // Invoke via DaprSDK (Invoke HTTP services using DaprClient)
+                
                 TasksList = await _daprClient.InvokeMethodAsync<List<TaskModel>>(HttpMethod.Get, "tasksmanager-backend-api", $"api/tasks?createdBy={TasksCreatedBy}");
                 return Page();
             } else {
